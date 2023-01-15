@@ -2,6 +2,8 @@
 
 <img src="./assets/desafio-02.gif" alt="Gif do projeto." />
 
+* <a href="https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-02/">Acesse aqui.</a>
+
 O desafio 2 é um card de produto. Uma página web simples, com troca de imagem para um gif, mostrando o produto girando.
 
 ## 🛠 Tecnologias
