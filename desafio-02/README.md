@@ -1,6 +1,6 @@
 # Desafio 2 - um card de produto ✅
 
-<img src="" alt="Gif do projeto." />
+<img src="./assets/desafio-02.gif" alt="Gif do projeto." />
 
 O desafio 2 é um card de produto. Uma página web simples, com troca de imagem para um gif, mostrando o produto girando.
 
