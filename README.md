@@ -1,4 +1,8 @@
-# boraCodar - Rocketseat 🚀
+# #boraCodar - Rocketseat 🚀
+
+<img src="https://img.shields.io/github/license/lucyanovidio/boraCodar-rocketseat.svg" />
+
+<br>
 
 O <a href="https://boracodar.dev">**#boraCodar**</a> é um projeto da <a href="https://rocketseat.com.br">Rocketseat</a> que se iniciou este ano para estimular a prática de programação semanal e ajudar na criação de projetos para portifólio.
 

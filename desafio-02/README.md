@@ -1,10 +1,16 @@
 # Desafio 2 - um card de produto ✅
 
-<img src="./assets/desafio-02.gif" alt="Gif do projeto." />
+<img src="./.github/preview-desafio-02.gif" alt="Gif do projeto." />
 
 * <a href="https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-02/">Acesse aqui.</a>
 
+## 💻 O desafio
+
 O desafio 2 é um card de produto. Uma página web simples, com troca de imagem para um gif, mostrando o produto girando.
+
+## 🎨 Layout do projeto
+
+Este é o <a href="https://www.figma.com/community/file/1195050984449538256">layout do projeto</a> no Figma.
 
 ## 🛠 Tecnologias
 
