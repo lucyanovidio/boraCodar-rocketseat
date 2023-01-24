@@ -1,6 +1,6 @@
 # Desafio 3 - Botões e cursores ✅
 
-<img src="./assets/preview-desafio-03.gif" alt="Gif do projeto." />
+<img src="./.github/preview-desafio-03.gif" alt="Gif do projeto." />
 
 * <a href="https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-03/">Acesse aqui.</a>
 
