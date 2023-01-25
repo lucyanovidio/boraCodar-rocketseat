@@ -1,6 +1,6 @@
 # Desafio 3 - Botões e cursores ✅
 
-<img src="./assets/preview-desafio-03.gif" alt="Gif do projeto." />
+<img src="./.github/preview-desafio-03.gif" alt="Gif do projeto." />
 
 * <a href="https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-03/">Acesse aqui.</a>
 
@@ -22,17 +22,3 @@ Este é o <a href="https://www.figma.com/community/file/1197534710257750520">lay
 <br>
 
 ***#boraCodar***
-<br>
-
----
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/lucyanovidio.png" width="100px" />
-    </td>
-    <td>
-      Feito por <a href="https://github.com/lucyanovidio">Lucyan Ovídio.</a> 🙋🏿‍♂️
-    </td>
-  </tr>
-</table>
