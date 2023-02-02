@@ -261,7 +261,7 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   top: 0;
   right: 0;
 
-  width: 45rem;
+  width: min(45rem, 90%);
   height: 100vh;
   background-color: var(--bg-color-2);
 
@@ -290,7 +290,7 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   gap: 3rem;
 }
 .user_info .chat__avatar--large {
-  scale: 1.2;
+  width: 11.5rem;
 }
 .user_info .content h4 {
   margin-bottom: 1rem;
@@ -343,12 +343,10 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-
   body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
     width: calc(1rem * 1.5 * 10);
     height: 12.3rem;
   }
-  
   body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__variant-popup {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -359,7 +357,9 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   .chat__footer__input::placeholder {
     color: transparent;
   }
-
+  .user_info__header {
+    flex-direction: column;
+  }
   .chat__send_msg_btn svg,
   .chat__emoji_btn .feather {
     width: 1.8rem;
