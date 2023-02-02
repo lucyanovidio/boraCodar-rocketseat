@@ -230,6 +230,10 @@ button:hover {
   top: 2.4rem;
   right: 5.6rem;
 }
+.chat__emoji_btn img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 
 /* EMOJI PICKER */
 
@@ -300,9 +304,10 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
 
 .modal {
   width: min(30rem, 80%);
-  height: 17rem;
+  min-height: 17rem;
 
   margin: auto;
+  padding: 1rem;
 
   border: none;
   border-radius: 1rem;
@@ -361,7 +366,7 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
     flex-direction: column;
   }
   .chat__send_msg_btn svg,
-  .chat__emoji_btn .feather {
+  .chat__emoji_btn img {
     width: 1.8rem;
     height: 1.8rem;
   }
@@ -372,5 +377,8 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   .chat__emoji_btn {
     top: 2.6rem;
     right: 4rem;
+  }
+  .modal__buttons {
+    flex-direction: column;
   }
 }

@@ -17,7 +17,7 @@ function createMyMsg(msgsContainer, hour, message) {
   msgsContainer.innerHTML += `
     <div class="chat__msg chat__msg_me">
       <button class="chat__msg__delete_btn">
-        <img src="./src/imgs/trash.svg" alt="Botão para excluir mensagem com ícone de lixo." />
+        <img src="./src/image/trash.svg" alt="Botão para excluir mensagem com ícone de lixo." />
       </button>
       <div class="chat__msg__content">
         <p>Você - ${hour}</p>

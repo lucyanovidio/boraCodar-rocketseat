@@ -25,9 +25,6 @@ let minutes = date.getMinutes();
 minutes < 10 ? (minutes = "0" + minutes) : (minutes = minutes);
 let currentHour = date.getHours() + ":" + minutes;
 
-window.addEventListener("click", (e) => {
-  console.log(e)
-})
 // Events
 window.addEventListener("load", startConversation);
 chatHeader.addEventListener("click", toggleUserInfo);
@@ -64,7 +61,9 @@ function sendMsg(event) {
   setTimeout(() => {
     let deleteMsgBtns = document.querySelectorAll(".chat__msg__delete_btn");
     deleteMsgBtns.forEach(deleteMsgBtn => {
-      deleteMsgBtn.addEventListener("click", deleteMsg);
+      deleteMsgBtn.onclick = () => {
+        deleteMsg(deleteMsgBtn);
+      }
     });
   }, 900);
   
@@ -84,18 +83,15 @@ function sendMsg(event) {
   }, 800);
 }
 
-function deleteMsg(event) {
+function deleteMsg(element) {
   modal.showModal();
 
   let yesBtn = document.querySelector(".yes_btn");
   let noBtn = document.querySelector(".no_btn");
-  let myMsgs = document.querySelectorAll("div.chat__msg.chat__msg_me");
 
-  myMsgs.forEach(myMsg => {
-    yesBtn.addEventListener("click", () => {
-      event.path.find(element => element == myMsg).innerHTML = "";
-      modal.close();
-    });
+  yesBtn.addEventListener("click", () => {
+    element.parentElement.innerHTML = ""; // or parentNode
+    modal.close();
   });
   noBtn.addEventListener("click", () => {
     modal.close();
@@ -119,6 +115,3 @@ emojiBtn.addEventListener("click", () => {
     picker.showPicker(emojiBtn);
   }
 });
-
-// Feather icons
-feather.replace();
