@@ -76,19 +76,23 @@ button:hover {
 
   transition: 300ms;
 }
+
 .chat__header:hover {
   cursor: pointer;
 }
+
 .chat__header__user,
 .chat__status {
   display: flex;
   align-items: center;
 }
+
 .close_btn,
 .chat__msg__delete_btn {
   background-color: transparent;
   transition: 200ms;
 }
+
 .close_btn {
   width: 3rem;
   height: 3rem;
@@ -97,27 +101,33 @@ button:hover {
 
   border-radius: .8rem;
 }
+
 .close_btn:hover,
 .chat__msg__delete_btn:hover {
   background-color: rgba(255, 255, 255, .2);
 }
+
 .chat__header__user {
   gap: 1.6rem;
 }
+
 .chat__avatar--small {
   width: 4.8rem;
   height: 4.8rem;
 }
+
 .chat__user_info p {
   font-size: var(--user-name-fs);
   line-height: 1.9rem;
 }
+
 .chat__status {
   gap: 0.4rem;
   color: var(--third-color);
 
   margin-top: 0.4rem;
 }
+
 .chat__circle {
   width: 0.8rem;
   height: 0.8rem;
@@ -131,48 +141,61 @@ button:hover {
   text-align: center;
   margin-top: 10.4rem;
 }
+
 .chat__msgs {
   margin: 1.4rem 0 5.4rem;
 }
+
 .chat__msg,
 .chat__msg__content {
   display: flex;
 }
+
 .chat__msg {
   gap: 2rem;
   margin: 3rem 0;
 }
+
 .chat__msg__content {
   flex-direction: column;
   gap: 1rem;
 }
+
 .chat__msg:last-child {
   margin: 3rem 0 10rem;
 }
+
 .chat__msg_friend {
   justify-content: flex-start;
 }
+
 .chat__msg_friend .chat__msg__content {
   align-items: flex-start;
 }
+
 .chat__msg_me {
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 .chat__msg_me .chat__msg__content {
   align-items: flex-end;
 }
+
 .chat__msg_text {
   padding: 1.4rem;
 }
+
 .chat__msg_friend .chat__msg_text {
   background-color: var(--primary-color);
   border-radius: 0 0.8rem 0.8rem 0.8rem;
 }
+
 .chat__msg_me .chat__msg_text {
   background-color: var(--secundary-color);
   border-radius: 0.8rem 0 0.8rem 0.8rem;
 }
+
 .chat__msg__delete_btn {
   width: fit-content;
   height: fit-content;
@@ -184,10 +207,12 @@ button:hover {
 
   border-radius: 100%;
 }
+
 .chat__msg:hover .chat__msg__delete_btn {
   opacity: 1;
   visibility: visible;
 }
+
 .chat__msg__delete_btn img {
   width: 2rem;
 }
@@ -203,6 +228,7 @@ button:hover {
   bottom: 0;
   padding: 1rem 0 3.2rem;
 }
+
 .chat__footer__input {
   width: 100%;
   padding: 1.9rem 5.2rem 1.9rem 2.4rem;
@@ -212,24 +238,30 @@ button:hover {
   border-radius: 99.9rem;
   background-color: var(--bg-color-2);
 }
+
 .chat__footer__input::placeholder {
   color: var(--text-color);
 }
+
 .chat__footer__input:focus {
   outline: 0.1rem solid var(--text-color);
 }
+
 .chat__send_msg_btn,
 .chat__emoji_btn {
   position: absolute;
 }
+
 .chat__send_msg_btn {
   top: 2.4rem;
   right: 1.6rem;
 }
+
 .chat__emoji_btn {
   top: 2.4rem;
   right: 5.6rem;
 }
+
 .chat__emoji_btn img {
   width: 2.4rem;
   height: 2.4rem;
@@ -242,17 +274,21 @@ body div.emoji-picker {
   height: fit-content;
   background-color: #2a2a2a;
 }
+
 body div.emoji-picker .emoji-picker__search-container .emoji-picker__search {
   padding: 0 3rem 0 1rem;
   color: #000;
 }
+
 body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
   width: calc(2rem * 1.5 * 10);
   height: 15.5rem;
 }
+
 body div.emoji-picker .emoji-picker__preview {
   height: 5.5rem;
 }
+
 body div.emoji-picker .emoji-picker__content .emoji-picker__emojis .emoji-picker__emoji,
 body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   font-size: 2rem;
@@ -274,17 +310,21 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   transform: translateX(100%);
   transition: 400ms;
 }
+
 .user_info.expanded {
   transform: translateX(0);
 }
+
 .user_info__close_btn {
   position: absolute;
   top: 1.6rem;
   right: 4rem;
 }
+
 .user_info__close_btn:hover {
   cursor: pointer;
 }
+
 .user_info__header {
   font-weight: 700;
 
@@ -293,9 +333,11 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   align-items: center;
   gap: 3rem;
 }
+
 .user_info .chat__avatar--large {
   width: 11.5rem;
 }
+
 .user_info .content h4 {
   margin-bottom: 1rem;
 }
@@ -315,13 +357,16 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
 
   text-align: center;
 }
+
 .modal::backdrop {
   background-color: rgba(0, 0, 0, .7);
 }
+
 .modal h4 {
   font-size: var(--user-name-fs);
   margin: 5rem 0 2rem;
 }
+
 .modal__buttons {
   width: fit-content;
 
@@ -330,6 +375,7 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
 
   margin: 0 auto;
 }
+
 .modal button {
   background-color: var(--primary-color);
   padding: 1rem 3rem;
@@ -337,6 +383,7 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
 
   transition: 200ms;
 }
+
 .modal button:hover {
   filter: brightness(1.2);
 }
@@ -348,10 +395,12 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
+
   body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
     width: calc(1rem * 1.5 * 10);
     height: 12.3rem;
   }
+
   body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__variant-popup {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -362,22 +411,27 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   .chat__footer__input::placeholder {
     color: transparent;
   }
+
   .user_info__header {
     flex-direction: column;
   }
+
   .chat__send_msg_btn svg,
   .chat__emoji_btn img {
     width: 1.8rem;
     height: 1.8rem;
   }
+
   .chat__send_msg_btn {
     top: 2.6rem;
     right: 1.6rem;
   }
+
   .chat__emoji_btn {
     top: 2.6rem;
     right: 4rem;
   }
+
   .modal__buttons {
     flex-direction: column;
   }
