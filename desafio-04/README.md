@@ -7,6 +7,7 @@
 ## 💻 O desafio
 
 O desafio 4 é uma página responsiva simulando um chat entre duas pessoas. Além do layout, implementei algumas ideias:
+* Aba lateral de informações do usuário
 * Você pode enviar mensagens
 * Você pode excluir suas mensagens
 * Horário atual da mensagem na hora que é enviada

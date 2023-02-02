@@ -335,3 +335,42 @@ body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
 .modal button:hover {
   filter: brightness(1.2);
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 400px) {
+  body div.emoji-picker .emoji-picker__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
+    width: calc(1rem * 1.5 * 10);
+    height: 12.3rem;
+  }
+  
+  body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__variant-popup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 262px) {
+  .chat__footer__input::placeholder {
+    color: transparent;
+  }
+
+  .chat__send_msg_btn svg,
+  .chat__emoji_btn .feather {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .chat__send_msg_btn {
+    top: 2.6rem;
+    right: 1.6rem;
+  }
+  .chat__emoji_btn {
+    top: 2.6rem;
+    right: 4rem;
+  }
+}

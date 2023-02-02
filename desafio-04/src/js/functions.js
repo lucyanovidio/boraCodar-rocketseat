@@ -45,7 +45,9 @@ function answerMyMsg(msgsContainer, hour, firstAnswer, yesOrNoAnswer, emojiAnswe
 
   if (
     myLastMsgContent.includes("qual") ||
+    myLastMsgContent.includes("quais") ||
     myLastMsgContent.includes("Qual") ||
+    myLastMsgContent.includes("Quais") ||
     myLastMsgContent.includes("?")
   ) {
     answer = genericAnswer;
