@@ -6,7 +6,11 @@
 
 ## 💻 O desafio
 
-O desafio 4 é uma página responsiva simulando um chat entre duas pessoas. Usei um pouco da convenção BEM para CSS que tenho estudado - que ajuda muito com a leitura de elementos pais e filhos, estados e a evitar acidentes de aplicações erradas de propriedades - para aplicar em projetos maiores futuramente. Além do layout, implementei algumas ideias:
+O desafio 4 é uma página responsiva simulando um chat entre duas pessoas. 
+
+Usei um pouco da convenção BEM para CSS que tenho estudado - que ajuda muito com a leitura de elementos pais e filhos, estados e a evitar acidentes de aplicações erradas de propriedades - para aplicar em projetos maiores futuramente. 
+
+E além do layout, implementei algumas ideias:
 * Aba lateral de informações do usuário
 * Você pode enviar mensagens
 * Você pode excluir suas mensagens
