@@ -1,0 +1,115 @@
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%; /* 62.5% * 16px = 10px. Then, 1rem = 10px */
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+
+    background: linear-gradient(#807ECE 0%, #8E7ECE 100%);
+
+    font-size: 1.6rem;
+}
+
+body * {
+    color: #EBEBEB;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    min-width: 35.6rem;
+
+    padding: 5.4rem 3.2rem 3.2rem;
+    
+    background-color: #2D2A37;
+    border-radius: 4.8rem;
+    box-shadow: 0rem 7.2rem 7.6rem rgb(0, 0, 0, .53);
+}
+
+/* CALC HEADER */
+
+.calculator__screen {
+    text-align: right;
+    margin-bottom: 2.6rem;
+    padding-inline: 2.2rem;
+}
+
+.calculator__current_calc,
+.calculator__current_operator {
+    color: #6B6B6B;
+}
+
+.calculator__current_calc {
+    min-height: 2.8rem;
+}
+
+.calculator__current_calc {
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+
+.calculator__result {
+    min-height: 5rem;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    font-size: 3.6rem;
+    line-height: 5.04rem;
+}
+
+/* CALC BUTTONS */
+
+.calculator__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1.2rem;
+}
+
+.calculator button {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: none;
+    border-radius: 100%;
+    box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.5);
+
+    font-size: 2.4rem;
+    line-height: 2.84rem;
+}
+
+.calculator button:hover {
+    cursor: pointer;
+    background: grey;
+}
+
+.calculator button.calculator__clear_all {
+    color: #975DFA;
+}
+
+.calculator button.calculator__operator:not(.rest),
+.calculator button.calculator__equal {
+    background: #462878;
+}
+
+.calculator button.calculator__operator:hover,
+.calculator button.calculator__equal:hover {
+    cursor: pointer;
+    background: #975DFA;
+}
