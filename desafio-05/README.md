@@ -11,7 +11,7 @@ O desafio 5 é um layout de uma calculadora.
 Construí o layout e tornei ela funcional. Além das funcionalidades comuns de uma calculadora, queimei também bastante a cabeça para implementar outras ideias:
 * Histórico do último cálculo realizado
 * Impedir que a operação comece com *, / e %, mas apenas com + ou -, permitindo operações com números negativos
-* impedir operador depois de operador, já que não implementei opção de uso de parêntesis
+* Impedir operador depois de operador, já que não implementei opção de uso de parêntesis
 
 ## 🎨 Layout do projeto
 
