@@ -11,7 +11,6 @@ O desafio 5 é um layout de uma calculadora.
 Construí o layout e tornei ela funcional buscando o máximo de semelhança com a calculadora do computador. Além das funcionalidades comuns de uma calculadora, queimei bastante a cabeça também para implementar outras ideias:
 * Funcionalidade de troca de sinal positivo para negativo e vice-versa
 * Digitação pelo teclado também
-* Impedir que a operação comece com *, / e %, mas apenas com + ou -, permitindo operações com números negativos
 * Responsividade
 
 ## 🎨 Layout do projeto
