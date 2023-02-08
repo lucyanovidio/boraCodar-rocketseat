@@ -10,162 +10,187 @@ let currentResultScreen = document.querySelector(".calculator__current_result");
 // Buttons
 const operatorBtns = document.querySelectorAll(".calculator__operator");
 const numberBtns = document.querySelectorAll(".calculator__number");
-const clearAllBtn = document.querySelector(".calculator__clear_all");
-const clearOneBtn = document.querySelector(".calculator__clear_one");
+const clearBtn = document.querySelector(".calculator__clear");
+const clearEntryBtn = document.querySelector(".calculator__clear_entry");
 const equalBtn = document.querySelector(".calculator__equal");
-const historyBtn = document.querySelector(".calculator__history");
+const toggleSignBtn = document.querySelector(".calculator__toggle_sign");
 
-let history = [];
+let firstTimeOperatorBtnClicked = 0;
 
 // ===== Events =====
 
-clearAllBtn.addEventListener("click", clearAll);
-clearOneBtn.addEventListener("click", clearOne);
-historyBtn.addEventListener("click", showHistory);
+clearBtn.addEventListener("click", clear);
+clearEntryBtn.addEventListener("click", clearEntry);
+toggleSignBtn.addEventListener("click", toggleSign);
+
+// Operating by typing
+window.addEventListener("keydown", e => {
+  operatorBtns.forEach(operatorBtn => {
+    let operator = operatorBtn.querySelector("span");
+    e.key === operator && operatorBtn.click();
+  });
+  numberBtns.forEach(numberBtn => {
+    e.key === numberBtn.innerText && numberBtn.click();
+  });
+  e.key === "Backspace" && clearEntryBtn.click();
+  e.key === "Enter" && equalBtn.click();
+  e.key === "Escape" && clear();
+});
 
 equalBtn.addEventListener("click", () => {
-  if (currentOperatorScreen.innerText !== "=") {
+  if (currentOperatorScreen.innerText !== "=" && currentCalcScreen.innerText) {
+    // Operations by equal button
     calculate(equalBtn);
   }
 });
 
 operatorBtns.forEach(operatorBtn => {
   operatorBtn.onclick = () => {
-    // Clearing if history is on screen
-    if (currentOperatorScreen.innerText === historyBtn.innerText) {
-      clearAll();
-    }
+    let operator = operatorBtn.querySelector("span");
 
-    // Checking operation to prohibit operators after operators
-    let firstCalcIntoArray = currentResultScreen.innerText.split("");
-    let lastChar = firstCalcIntoArray[firstCalcIntoArray.length - 1];
-    let isLastCharAnOperator = 
-      lastChar === "+" ||
-      lastChar === "-" ||
-      lastChar === "*" ||
-      lastChar === "/" ||
-      lastChar === "%";
     let isOperatorBtnProhibitedChar =
-      operatorBtn.innerText === "*" ||
-      operatorBtn.innerText === "/" ||
-      operatorBtn.innerText === "%";
+      operator.innerText === "*" ||
+      operator.innerText === "/" ||
+      operator.innerText === "%";
 
-    // Preventing operation from starting with: *, / ou %
+    // Preventing operation from starting with: *, / or %
     if (currentResultScreen.innerText === "0" && isOperatorBtnProhibitedChar) {
       return;
     }
-    // First operation
-    if (!currentCalcScreen.innerText && !isLastCharAnOperator) {
-      addOnResultScreen(operatorBtn);
-      return;
-    }
-    // Next operations, happen only if last char is a number
-    if (!isLastCharAnOperator) {
-      calculate(operatorBtn);
-    }
+    // Operations by operator button
+    firstTimeOperatorBtnClicked++;
+    calculate(operator);
   };
 });
 
 numberBtns.forEach(numberBtn => {
   numberBtn.onclick = () => {
-    // Clearing if history is on screen
-    if (currentOperatorScreen.innerText === historyBtn.innerText) {
-      clearAll();
-    }
+    // Removing operator from calc screen to check if we need to erase before inserting new number
+    let currentCalcIntoArray = currentCalcScreen.innerText.split("");
+    currentCalcIntoArray.pop();
 
-    // First operation
-    if (!currentCalcScreen.innerText) {
-      addOnResultScreen(numberBtn);
-      return;
-    }
-    // Next operations
-    if (currentResultScreen.innerText === currentCalcScreen.innerText) {
+    if (currentCalcIntoArray.join("") === currentResultScreen.innerText) {
       currentResultScreen.innerText = "";
     }
-    addOnResultScreen(numberBtn);
+
+    // Clearing if the screen is full
+    if (currentOperatorScreen.innerText === "=") {
+      clear();
+    }
+    // Inserting new number
+    if (currentResultScreen.innerText == 0) {
+      currentResultScreen.innerText = "";
+    }
+    currentResultScreen.innerText += numberBtn.innerText;
   };
 });
 
 // ===== Functions =====
 
-function addOnResultScreen(element) {
-  if (currentResultScreen.innerText == 0) {
-    currentResultScreen.innerText = "";
-  }
-  currentResultScreen.innerText += element.innerText;
-}
-
 function calculate(operator) {
+  // Getting last operator and element before writing new ones
   let lastOperator = currentOperatorScreen.innerText;
+  let firstElementOnCalc = currentCalcScreen.innerText;
+
   currentOperatorScreen.innerText = operator.innerText;
 
-  // Conditions for first operation
-  if (!currentCalcScreen.innerText) {
-    currentCalcScreen.innerText = currentResultScreen.innerText;
-  }
-  if (currentCalcScreen.innerText === currentResultScreen.innerText) {
-    let firstCalculation = currentResultScreen.innerText
-    history.push(firstCalculation);
-    
-    currentResultScreen.innerText = eval(currentResultScreen.innerText).toFixed(2);
-    return;
-  }
-
-  // Next operations
-
   // Starting writing the result on the screen above
-  if (isCalcScreenAnOperation()) {
-    currentCalcScreen.innerText = currentResultScreen.innerText;
+  if (!currentCalcScreen.innerText || isAnOperator(operator.innerText)) {
+    currentCalcScreen.innerText =
+      currentResultScreen.innerText + operator.innerText;
   }
-  // Conditions for next operations
-  if (
-    !isCalcScreenAnOperation() &&
-    currentCalcScreen.innerText != currentResultScreen.innerText
-  ) {
-    let calculation =
-      currentCalcScreen.innerText +
-      lastOperator +
-      currentResultScreen.innerText;
 
-    history.push(calculation);
+  // Calculating and writing on screen
+  if (firstTimeOperatorBtnClicked > 1 || operator.innerText === "=") {
+    if (lastOperator === "=") {
+      firstElementOnCalc = currentResultScreen.innerText + operator.innerText;
+    }
 
-    currentCalcScreen.innerText = eval(calculation).toFixed(2);
-    currentResultScreen.innerText = eval(calculation).toFixed(2);
+    let calculation = firstElementOnCalc + currentResultScreen.innerText;
+
+    // In case it's an operator
+    if (isAnOperator(operator.innerText) && lastOperator !== "=") {
+      currentCalcScreen.innerText = eval(calculation) + operator.innerText;
+      currentResultScreen.innerText = eval(calculation);
+      return;
+    }
+    // In case it's an equal sign
+    if (!isAnOperator(operator.innerText)) {
+      currentCalcScreen.innerText = calculation;
+      currentResultScreen.innerText = eval(calculation);
+    }
   }
 }
 
-function clearAll() {
+function clear() {
   currentCalcScreen.innerText = "";
   currentOperatorScreen.innerText = "";
   currentResultScreen.innerText = "0";
+
+  firstTimeOperatorBtnClicked = 0;
 }
 
-function clearOne() {
-  let currentText = currentResultScreen.innerText;
-  let newText = currentText.split("");
+function clearEntry() {
+  let currentResultText = currentResultScreen.innerText;
+  let newResultText = currentResultText.split("");
 
-  newText.pop();
-  currentResultScreen.innerText = newText.join("");
+  if (currentResultText.length > 1) {
+    newResultText.pop();
+    currentResultScreen.innerText = newResultText.join("");
+    return;
+  }
+  currentResultScreen.innerText = "0";
 }
 
-function isCalcScreenAnOperation() {
-  let calcScreenIntoArray = currentCalcScreen.innerText.split("");
- 
+function toggleSign() {
+  let currentResultIntoArray = currentResultScreen.innerText.split("");
+  let currentCalcIntoArray = currentCalcScreen.innerText.split("");
+
+  if (currentResultIntoArray[0] === "-") {
+    currentResultIntoArray.shift();
+    currentResultScreen.innerText = currentResultIntoArray.join("");
+    return;
+  }
+  if (currentResultIntoArray[0] !== "-" && currentOperatorScreen.innerText === "+") {
+    currentCalcIntoArray.pop(); 
+    // Removing the plus sign and adding the minus sign
+    currentOperatorScreen.innerText = "-";
+    currentCalcScreen.innerText = currentCalcIntoArray.join("") + "-";
+    return;
+  }
+  if (currentResultIntoArray[0] !== "-" && currentOperatorScreen.innerText === "-") {
+    currentCalcIntoArray.pop(); 
+    // Removing the minus sign and adding the plus sign
+    currentOperatorScreen.innerText = "+";
+    currentCalcScreen.innerText = currentCalcIntoArray.join("") + "+";
+    return;
+  }
+  if (currentResultIntoArray[0] !== "-" && !currentOperatorScreen.innerText && currentResultScreen.innerText !== "0") {
+    // Adding the minus sign
+    currentOperatorScreen.innerText = "-";
+    currentCalcScreen.innerText = "0-";
+    return;
+  }
+}
+
+function checkSecondOperatorIndex(string) {
+  let myStringIntoArray = string.split("");
+  let secondOperator = myStringIntoArray.find(
+    element => myStringIntoArray.indexOf(element) > 0 && isAnOperator(element)
+  );
+
+  return myStringIntoArray.indexOf(secondOperator);
+}
+
+function isAnOperator(element) {
   return (
-    calcScreenIntoArray.indexOf("+") > 0 ||
-    calcScreenIntoArray.indexOf("-") > 0 ||
-    calcScreenIntoArray.indexOf("*") > 0 ||
-    calcScreenIntoArray.indexOf("/") > 0 ||
-    calcScreenIntoArray.indexOf("%") > 0
+    element === "+" ||
+    element === "-" ||
+    element === "*" ||
+    element === "/" ||
+    element === "%"
   );
 }
 
-function showHistory() {
-  if (history.length === 0) {
-    return;
-  }
-
-  currentCalcScreen.innerText = "";
-  currentOperatorScreen.innerText = historyBtn.innerText;
-  currentResultScreen.innerText = history[history.length - 1];
-}
+// Feather Icons Lib
+feather.replace();
