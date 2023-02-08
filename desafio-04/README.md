@@ -2,7 +2,11 @@
 
 <img src="./.github/preview-desafio-04.gif" alt="Gif do projeto." />
 
-* <a href="https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-04/">Acesse aqui.</a>
+<div align="center">
+
+[🚀 Acesse aqui](https://lucyanovidio.github.io/boraCodar-rocketseat/desafio-04/) | [🔗 Post no LinkedIn](https://www.linkedin.com/posts/lucyanovidio_boracodar-html-css-activity-7027053363980570624-Ftj_?utm_source=share&utm_medium=member_desktop)
+
+</div>
 
 ## 💻 O desafio
 
