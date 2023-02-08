@@ -46,19 +46,9 @@ equalBtn.addEventListener("click", () => {
 
 operatorBtns.forEach(operatorBtn => {
   operatorBtn.onclick = () => {
-    let operator = operatorBtn.querySelector("span");
-
-    let isOperatorBtnProhibitedChar =
-      operator.innerText === "*" ||
-      operator.innerText === "/" ||
-      operator.innerText === "%";
-
-    // Preventing operation from starting with: *, / or %
-    if (currentResultScreen.innerText === "0" && isOperatorBtnProhibitedChar) {
-      return;
-    }
-    // Operations by operator button
     firstTimeOperatorBtnClicked++;
+    // Operations by operator button
+    let operator = operatorBtn.querySelector("span");
     calculate(operator);
   };
 });
