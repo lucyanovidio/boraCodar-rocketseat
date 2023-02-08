@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -26,25 +27,40 @@
         </div>
       </header>
       <div class="calculator__buttons">
-        <button class="calculator__clear_all">CE</button>
-        <button class="calculator__clear_one">C</button>
-        <button class="calculator__operator rest">%</button>
-        <button class="calculator__operator">/</button>
+        <button class="calculator__clear_entry">CE</button>
+        <button class="calculator__clear">C</button>
+        <button class="calculator__operator rest">
+          <i data-feather="percent"></i>
+          <span>%</span>
+        </button>
+        <button class="calculator__operator">
+          <i data-feather="divide"></i>  
+          <span>/</span>
+        </button>
         <button class="calculator__number">7</button>
         <button class="calculator__number">8</button>
         <button class="calculator__number">9</button>
-        <button class="calculator__operator">*</button>
+        <button class="calculator__operator">
+          <i data-feather="x"></i>  
+          <span>*</span>
+        </button>
         <button class="calculator__number">4</button>
         <button class="calculator__number">5</button>
         <button class="calculator__number">6</button>
-        <button class="calculator__operator">-</button>
+        <button class="calculator__operator">
+          <i data-feather="minus"></i>  
+          <span>-</span>
+        </button>
         <button class="calculator__number">1</button>
         <button class="calculator__number">2</button>
         <button class="calculator__number">3</button>
-        <button class="calculator__operator">+</button>
-        <button class="calculator__history">H</button>
+        <button class="calculator__operator">
+          <i data-feather="plus"></i>  
+          <span>+</span>
+        </button>
+        <button class="calculator__toggle_sign">+/-</button>
         <button class="calculator__number">0</button>
-        <button class="calculator__number">,</button>
+        <button class="calculator__number">.</button>
         <button class="calculator__equal">=</button>
       </div>
     </main>
