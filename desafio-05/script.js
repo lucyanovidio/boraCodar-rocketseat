@@ -27,7 +27,7 @@ toggleSignBtn.addEventListener("click", toggleSign);
 window.addEventListener("keydown", e => {
   operatorBtns.forEach(operatorBtn => {
     let operator = operatorBtn.querySelector("span");
-    e.key === operator && operatorBtn.click();
+    e.key == operator.innerText && operatorBtn.click();
   });
   numberBtns.forEach(numberBtn => {
     e.key === numberBtn.innerText && numberBtn.click();
