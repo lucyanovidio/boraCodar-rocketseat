@@ -8,10 +8,11 @@
 
 O desafio 5 é um layout de uma calculadora. 
 
-Construí o layout e tornei ela funcional. Além das funcionalidades comuns de uma calculadora, queimei também bastante a cabeça para implementar outras ideias:
-* Histórico do último cálculo realizado
+Construí o layout e tornei ela funcional buscando o máximo de semelhança com a calculadora do computador. Além das funcionalidades comuns de uma calculadora, queimei bastante a cabeça também para implementar outras ideias:
+* Funcionalidade de troca de sinal positivo para negativo e vice-versa
+* Digitação pelo teclado também
 * Impedir que a operação comece com *, / e %, mas apenas com + ou -, permitindo operações com números negativos
-* Impedir operador depois de operador, já que não implementei opção de uso de parêntesis
+* Responsividade
 
 ## 🎨 Layout do projeto
 
