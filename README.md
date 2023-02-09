@@ -20,6 +20,22 @@ Participe também! É só entrar no site do <a href="https://boracodar.dev">**#b
 
 <br>
 
+<table>
+  <tr>
+    <th colspan="2">Desafios</th>
+  </tr>
+  <tr>
+    <td>2. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-02">Card de produto</a></td>
+    <td>3. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-03">Botões e cursores</a></td>
+  </tr>
+  <tr>
+    <td>4. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-04">Chat</a></td>
+    <td>5. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-05">Calculadora</a></td>
+  </tr>
+</table>
+
+<br>
+
 ---
 
 <table>
