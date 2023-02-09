@@ -22,10 +22,10 @@ const genericAnswers = [
 const laughAnswers = ["kkkkk", "hahahaha", "Só bobeira ksksks", "😹", "🤭"];
 
 const defaultAnswers = [
-  "Não entendi 🤔",
+  "Não sei, amigx",
   "🤔",
-  "Me explica melhor",
-  "Que?",
+  "Exatamente",
+  "Ai sei lá, sabe",
   "Como assim?",
   "🤷🏽‍♀️",
 ];
