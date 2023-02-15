@@ -1,0 +1,202 @@
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --fs-text: clamp(1rem, 1vw + 1.1rem, 1.4rem);
+    --fs-info: clamp(1.2rem, 1vw + 1.4rem, 1.6rem);
+    --fs-title: clamp(1.4rem, 1vw + 1.2rem, 2rem);
+    --fs-heading: clamp(2.4rem, 1vw + 2rem, 4rem);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    background: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%);
+
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+body * {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* HEADER */
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: var(--fs-title);
+    line-height: 2.4rem;
+    color: #fff;
+}
+
+/* CARD */
+
+.card {
+    width: min(90%, 32.7rem);
+    height: 54.4rem;
+    border-radius: 2.4rem;
+}
+
+.card__section,
+.card__text-wrapper,
+.card__text-wrapper-2__text,
+.card__text-wrapper__container {
+    display: flex;
+}
+
+.card__section {
+    flex-direction: column;
+    gap: 2.4rem;
+
+    background-color: #fff;
+    border-radius: 2.4rem;
+
+    padding: 2.4rem 3.2rem;
+
+    text-align: center;
+}
+
+.card__text-wrapper {
+    justify-content: space-between;
+}
+
+.card__text-wrapper__text:first-child,
+.card__text-wrapper__container .card__text-wrapper__text,
+.card__text-wrapper-2__text:first-child {
+    text-align: left;
+}
+
+.card__text-wrapper-2__text:nth-child(2) {
+    align-items: center;
+}
+
+.card__section:not(.section-3) .card__text-wrapper__text:last-child,
+.card__text-wrapper-2__text p:nth-child(2),
+.card__text-wrapper-2__text:last-child p:nth-child(2),
+.card__text-wrapper-2__text h3:nth-child(2) {
+    text-align: right;
+}
+
+.card__text-wrapper__text p:first-child,
+.card__text-wrapper-2__text:first-child,
+.card__qr-code-container p {
+    font-weight: 400;
+    font-size: var(--fs-text);
+    color: rgba(0 0 0 / .64);
+    line-height: 1.7rem;
+}
+
+.card__text-wrapper__text p:last-child {
+    font-weight: 500;
+    font-size: var(--fs-info);
+    line-height: 1.9rem;
+}
+
+.card__text-wrapper__text p:last-child:not(.hour) {
+    color: rgba(0 0 0 / .88);
+}
+
+.card__text-wrapper-2__text {
+    justify-content: space-between;
+}
+
+.card__text-wrapper-2__text h3 {
+    font-weight: 500;
+    font-size: var(--fs-heading);
+    line-height: 4.7rem;
+}
+
+.card__text-wrapper-2__text span {
+    font-size: 1rem;
+    position: absolute;
+}
+
+img.airplane {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+}
+
+.card__section.section-2 {
+    border-top: .2rem dashed rgba(0 0 0 / .25);
+    border-bottom: .2rem dashed rgba(0 0 0 / .25);
+}
+
+.card__text-wrapper__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.card__text-wrapper__container .hour {
+    width: fit-content;
+    padding: .4rem .8rem;
+    background-color: #633BBC;
+    border-radius: .8rem;
+    color: #fff;
+}
+
+img.qr-code {
+    width: 100%;
+    min-width: 10rem;
+    max-width: 16rem;
+}
+
+.card__qr-code-container {
+    text-align: center;
+}
+
+.section-3 p:last-child {
+    font-size: var(--fs-text);
+    line-height: 2rem;
+}
+
+/* FOOTER */
+
+footer p {
+    max-width: 26.9rem;
+
+    font-weight: 400;
+    font-size: var(--fs-text);
+    color: rgba(255 255 255 / .64);
+    line-height: 2.4rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 270px) {
+    .card__text-wrapper,
+    .card__text-wrapper-2__text {
+        flex-direction: column;
+    }
+
+    .card__text-wrapper__text:first-child,
+    .card__text-wrapper__container .card__text-wrapper__text,
+    .card__text-wrapper-2__text:first-child,
+    .card__section:not(.section-3) .card__text-wrapper__text:last-child,
+    .card__text-wrapper-2__text p:nth-child(2),
+    .card__text-wrapper-2__text:last-child p:nth-child(2),
+    .card__text-wrapper-2__text h3:nth-child(2) {
+        text-align: center;
+    }
+
+    .card__text-wrapper__container {
+        align-items: center;
+    }
+}
