@@ -32,6 +32,10 @@ Participe também! É só entrar no site do <a href="https://boracodar.dev">**#b
     <td>4. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-04">Chat</a></td>
     <td>5. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-05">Calculadora</a></td>
   </tr>
+  <tr>
+    <td>6. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-06">Cartão de embarque</a></td>
+    <td></td>
+  </tr>
 </table>
 
 <br>
