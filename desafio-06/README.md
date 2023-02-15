@@ -1,4 +1,4 @@
-# Desafio 5 - Cartão de embarque ✅
+# Desafio 6 - Cartão de embarque ✅
 
 <img src="./.github/preview-desafio-06.png" alt="Preview do projeto." />
 
@@ -10,7 +10,7 @@
 
 ## 💻 O desafio
 
-O desafio 5 é um layout de um cartão de embarque fictício para uma viagem.
+O desafio 6 é um layout de um cartão de embarque fictício para uma viagem.
 
 ## 🎨 Layout do projeto
 
