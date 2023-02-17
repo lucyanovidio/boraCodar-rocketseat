@@ -10,6 +10,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.autoSave": "afterDelay",
+  "editor.tabCompletion": "on",
 
   // explorer
   "explorer.compactFolders": false,
@@ -17,7 +18,7 @@
   // workbench
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Omni",
+  "workbench.colorTheme": "Aura Dark",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -33,5 +34,5 @@
       "source": "Git Bash"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
