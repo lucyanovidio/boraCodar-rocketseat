@@ -35,7 +35,8 @@ body * {
     font-family: 'Rubik', sans-serif;
 }
 
-/* Utility class */
+/* Utility classes */
+
 .flex {
     display: flex;
 }
@@ -81,7 +82,7 @@ h1 {
     text-align: center;
         
     /* 
-        - We call the mask prop here because .card__section is a general class for sections. Mask recieves images with different props, than we apply those props creating a different "--mask" on each section selector, as they are different
+        - We call the mask prop here because .card__section is a general class for sections. Mask receives images with different props, than we apply those props creating a different "--mask" on each section selector, as they are different
         - We also use -webkit vendor prefix for chrome
     */
     mask: var(--mask);
@@ -92,8 +93,8 @@ h1 {
     border-radius: 2.4rem 2.4rem 0 0;
 
     /*
-        - Masks recieve images, than we create a ball image using radial gradient (params: size, initial color + transition, ending color (black is understood as transparent for masks))
-        - "1.2rem at 1.2rem" means size 1.2rem and placed 1.2rem horizontally from the border."bottom" put the mask on bottom. "-1.2rem" means it will translateX -1.2rem (to the left), and when it happens, our ball appears on the other side, as it exists based on .card's width. 
+        - Masks receive images, than we create a ball image using radial gradient (params: size, initial color + transition, ending color (black is understood as transparent for masks))
+        - "1.2rem at 1.2rem" means 1.2rem of size and places it 1.2rem horizontally from the border."bottom" puts the mask on bottom. "-1.2rem" means it will translateX -1.2rem (to the left), and when it happens, our ball appears on the other side, as it exists based on the width of .card. 
     */
     --mask: radial-gradient(
         1.2rem at 1.2rem bottom, transparent 95%, black
@@ -162,7 +163,7 @@ img.airplane {
     border-block: .2rem dashed rgba(0 0 0 / .25);
 
     /* 
-        - Instead of "top" or "bottom" we use 1.2rem that places the mask 1.2rem vertically from the border this time. Than, besides -1.2rem at the end, we use another -1.2rem to translateY the ball for it to appear on the other side 
+        - Instead of "top" or "bottom" we use 1.2rem, what places the mask 1.2rem vertically from the border this time. Than, besides -1.2rem at the end, we use another -1.2rem to translateY the ball for it to appear on the other side 
     */
     --mask: radial-gradient(
         1.2rem at 1.2rem 1.2rem, transparent 95%, black
@@ -199,7 +200,7 @@ img.qr-code {
 .card__section.section-3 {
     border-radius: 0 0 2.4rem 2.4rem;
 
-    /* "top" put the mask on top this time */
+    /* "top" puts the mask on top this time */
     --mask: radial-gradient(
         1.2rem at 1.2rem top, transparent 95%, black
     ) -1.2rem;
