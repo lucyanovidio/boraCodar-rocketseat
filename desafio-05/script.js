@@ -163,15 +163,6 @@ function toggleSign() {
   }
 }
 
-function checkSecondOperatorIndex(string) {
-  let myStringIntoArray = string.split("");
-  let secondOperator = myStringIntoArray.find(
-    element => myStringIntoArray.indexOf(element) > 0 && isAnOperator(element)
-  );
-
-  return myStringIntoArray.indexOf(secondOperator);
-}
-
 function isAnOperator(element) {
   return (
     element === "+" ||
