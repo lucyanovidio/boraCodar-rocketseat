@@ -19,10 +19,10 @@ export const screen = {
     const subtractionWithPositiveNumbers =
         currentResultIntoArray[0] !== "-" && screen.currentOperator.innerText === "-";
 
-    if (negativeNumber) switchToPositive(currentResultIntoArray);
-    if (positiveNumberOnFirstOperation) switchToNegative();
-    if (sumWithPositiveNumbers) switchToSubtraction(currentCalcIntoArray);
-    if (subtractionWithPositiveNumbers) switchToSum(currentCalcIntoArray);
+    if (negativeNumber) return switchToPositive(currentResultIntoArray);
+    if (positiveNumberOnFirstOperation) return switchToNegative();
+    if (sumWithPositiveNumbers) return switchToSubtraction(currentCalcIntoArray);
+    if (subtractionWithPositiveNumbers) return switchToSum(currentCalcIntoArray);
   },
   clear() {
     screen.currentCalc.innerText = "";
@@ -46,25 +46,21 @@ export const screen = {
 function switchToPositive(operationArray) {
   operationArray.shift();
   screen.currentResult.innerText = operationArray.join("");
-  return;
 }
 
 function switchToNegative() {
   screen.currentOperator.innerText = "-";
   screen.currentCalc.innerText = "0-";
-  return;
 }
 
 function switchToSubtraction(operationArray) {
   operationArray.pop();
   screen.currentOperator.innerText = "-";
   screen.currentCalc.innerText = operationArray.join("") + "-";
-  return;
 }
 
 function switchToSum(operationArray) {
   operationArray.pop();
   screen.currentOperator.innerText = "+";
   screen.currentCalc.innerText = operationArray.join("") + "+";
-  return;
 }

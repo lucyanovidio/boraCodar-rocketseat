@@ -2,6 +2,8 @@ import { isAnOperator } from "./utils.js"
 import { screen } from "./screen.js";
 import { button } from "./button.js"
 
+let firstTimeOperatorButtonClicked = 0;
+
 window.onkeydown = (e) => handleKeydown(e);
 
 button.equal.onclick = () => 
@@ -25,7 +27,7 @@ function calculate(operator) {
   }
 
   // Calculating and writing on screen
-  if (button.firstTimeOperatorClicked > 1 || operator.innerText === "=") {
+  if (firstTimeOperatorButtonClicked >= 1 || operator.innerText === "=") {
     if (lastOperator === "=") {
       firstElementOnCalc = screen.currentResult.innerText + operator.innerText;
     }
@@ -70,7 +72,8 @@ function handleOperatorButtonClick(button) {
   let operator = button.querySelector("span");
   calculate(operator);
   
-  button.firstTimeOperatorClicked++;
+  firstTimeOperatorButtonClicked++;
+  console.log(firstTimeOperatorButtonClicked)
 }
 
 function handleNumberButtonClick(button) {

@@ -6,8 +6,7 @@ export const button = {
     equal: document.querySelector(".calculator__equal"),
     clear: document.querySelector(".calculator__clear"),
     clearEntry: document.querySelector(".calculator__clear_entry"),
-    toggleCalculationSign: document.querySelector(".calculator__toggle_sign"),
-    firstTimeOperatorClicked: 0,
+    toggleCalculationSign: document.querySelector(".calculator__toggle_sign")
 };
 
 button.clear.onclick = () => screen.clear();
