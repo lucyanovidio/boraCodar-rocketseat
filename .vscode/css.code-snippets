@@ -22,5 +22,17 @@
       ""
     ],
     "description": "Init my CSS"
+  },
+  "Display flex properties": {
+    "scope": "css",
+    "prefix": "flex",
+    "body": [
+      "display: flex;",
+      "flex-direction: column;",
+      "justify-content: center;",
+      "align-items: center;",
+      "gap: $1;"
+    ],
+    "description": "Display flex most used properties"
   }
 }

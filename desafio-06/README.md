@@ -12,6 +12,11 @@
 
 O desafio 6 é um layout de um cartão de embarque fictício para uma viagem.
 
+Nele aprendi algumas coisas para CSS:
+* Classes utilitárias
+* Mask
+* Radial-gradient
+
 ## 🎨 Layout do projeto
 
 Este é o <a href="https://www.figma.com/community/file/1205146101173113980">layout do projeto</a> no Figma.
