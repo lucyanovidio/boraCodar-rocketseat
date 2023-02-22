@@ -1,5 +1,3 @@
-import { button } from "./button.js"
-
 export const screen = {
   currentCalc: document.querySelector(".calculator__current_calc"),
   currentResult: document.querySelector(".calculator__current_result"),
@@ -24,11 +22,11 @@ export const screen = {
     if (sumWithPositiveNumbers) return switchToSubtraction(currentCalcIntoArray);
     if (subtractionWithPositiveNumbers) return switchToSum(currentCalcIntoArray);
   },
-  clear() {
+  clear(counter) {
     screen.currentCalc.innerText = "";
     screen.currentOperator.innerText = "";
     screen.currentResult.innerText = "0";
-    button.firstTimeOperatorClicked = 0;
+    counter = 0;
   },
   clearEntry() {
     let currentResultText = screen.currentResult.innerText;

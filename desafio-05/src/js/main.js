@@ -62,7 +62,7 @@ function handleKeydown(e) {
 
   e.key === "Backspace" && button.clearEntry.click();
   e.key === "Enter" && button.equal.click();
-  e.key === "Escape" && screen.clear();
+  e.key === "Escape" && screen.clear(firstTimeOperatorButtonClicked);
 }
 
 function handleEqualButtonClick(button) {
@@ -88,7 +88,7 @@ function handleNumberButtonClick(button) {
   const isThisTheFirstOperation = screen.currentResult.innerText == 0;
 
   if (currentCalcAndResultAreEqual) screen.currentResult.innerText = "";
-  if (isScreenFull) screen.clear();
+  if (isScreenFull) screen.clear(firstTimeOperatorButtonClicked);
   if (isThisTheFirstOperation) screen.currentResult.innerText = "";
 
   screen.currentResult.innerText += button.innerText;
