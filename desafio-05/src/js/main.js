@@ -27,7 +27,10 @@ function calculate(operator) {
   }
 
   // Calculating and writing on screen
-  if (firstTimeOperatorButtonClicked >= 1 || operator.innerText === "=") {
+  
+  const wasSignRecentlyToggled = firstElementOnCalc === "0-" || firstElementOnCalc === "0+";
+
+  if (firstTimeOperatorButtonClicked >= 1 || wasSignRecentlyToggled || operator.innerText === "=") {
     if (lastOperator === "=") {
       firstElementOnCalc = screen.currentResult.innerText + operator.innerText;
     }
@@ -73,7 +76,6 @@ function handleOperatorButtonClick(button) {
   calculate(operator);
   
   firstTimeOperatorButtonClicked++;
-  console.log(firstTimeOperatorButtonClicked)
 }
 
 function handleNumberButtonClick(button) {
