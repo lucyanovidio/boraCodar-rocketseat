@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Desafio 10 - #boraCodar</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/index.js" type="module" defer></script>
+  </head>
+  <body class="flex flex-center flex-column">
+    <header>
+        <form>
+            <label for="city-input">Digite sua cidade</label>
+            <div class="input-wrapper">
+                <input type="text" id="city-input" placeholder="Ex.: Nova Iguaçu" />
+                <button>Verificar</button>
+            </div>
+        </form>
+    </header>
+
+    <div class="wrapper flex flex-center">
+      <div class="container grid">
+        <img
+          src="./src/assets/imgs/clouds-img.svg"
+          alt="Imagem de nuvens representando o tempo atual"
+          id="weather-img"
+        />
+        <section class="col-a">
+          <h4 class="flex flex-center">
+            <img
+              src="./src/assets/icons/pin-icon.svg"
+              alt="Ícone de localização"
+            />
+            <span>Rio do Sul, SC</span>
+          </h4>
+          <div class="main-info grid">
+            <div class="numbers flex flex-center flex-column">
+              <h1 id="current-temperature">18</h1>
+              <div class="temperatures flex flex">
+                <p class="day-temperature">22°</p>
+                <p class="info-text night-temperature">16°</p>
+              </div>
+            </div>
+            <div class="celcius">°C</div>
+          </div>
+          <footer class="flex flex-center">
+            <div class="weather-info flex flex-center">
+              <img
+                src="./src/assets/icons/wind-icon.svg"
+                alt="Imagem em desenho que representa o vento"
+              />
+              <div class="weather-info-text">
+                <p class="small-text">Vento</p>
+                <p>
+                  <span>17</span>
+                  <span>km/h</span>
+                </p>
+              </div>
+            </div>
+            <div class="weather-info flex flex-center">
+              <img
+                src="./src/assets/icons/humidity-icon.svg"
+                alt="Imagem em desenho que representa a umidade"
+              />
+              <div class="weather-info-text">
+                <p class="small-text">Umidade</p>
+                <p>
+                  <span>31</span>
+                  <span>%</span>
+                </p>
+              </div>
+            </div>
+            <div class="weather-info flex flex-center">
+              <img
+                src="./src/assets/icons/rain-icon.svg"
+                alt="Imagem em desenho que representa o chuva"
+              />
+              <div class="weather-info-text">
+                <p class="small-text">Chuva</p>
+                <p>
+                  <span>10</span>
+                  <span>%</span>
+                </p>
+              </div>
+            </div>
+          </footer>
+        </section>
+        <section class="col-b grid">
+          <section id="air-section">
+            <h4 class="flex flex-center">
+              <img
+                src="./src/assets/icons/leaf-icon.svg"
+                alt="Ícone de uma folha de árvore"
+              />
+              <span class="info-text">Qualidade do ar</span>
+            </h4>
+            <div class="air-info">
+              <p>Boa</p>
+              <p>21</p>
+            </div>
+            <footer class="flex flex-center">
+              <div class="air-info">
+                <p>12.9</p>
+                <p class="small-text">PM2.5</p>
+              </div>
+              <div class="air-info">
+                <p>12.9</p>
+                <p class="small-text">PM10</p>
+              </div>
+              <div class="air-info">
+                <p>2.1</p>
+                <p class="small-text">S0₂</p>
+              </div>
+              <div class="air-info">
+                <p>1.4</p>
+                <p class="small-text">NO₂</p>
+              </div>
+              <div class="air-info">
+                <p>21.2</p>
+                <p class="small-text">O₃</p>
+              </div>
+              <div class="air-info">
+                <p>0.7</p>
+                <p class="small-text">CO</p>
+              </div>
+            </footer>
+          </section>
+          <section id="sun-section">
+            <h4 class="flex flex-center">
+              <img
+                src="./src/assets/icons/sun-time-icon.svg"
+                alt="Ícone de relógio em formato de sol"
+              />
+              <span class="info-text">Horário do sol</span>
+            </h4>
+            <div class="chart">
+              <div class="chart-bg"></div>
+            </div>
+          </section>
+          <section id="week-section" class="flex flex-center">
+            <div class="week-card flex flex-column flex-center">
+              <p class="text">Amanhã</p>
+              <img
+                src="./src/assets/imgs/cloudy-img.svg"
+                alt="Imagem de nuvens em desenho"
+              />
+              <div class="temperatures flex flex-center">
+                <p class="day-temperature">21°</p>
+                <p class="info-text night-temperature">16°</p>
+              </div>
+            </div>
+            <div class="week-card flex flex-column flex-center">
+              <p class="text">Sexta-feira</p>
+              <img
+                src="./src/assets/imgs/sunny-img.svg"
+                alt="Imagem do sol em desenho"
+              />
+              <div class="temperatures flex flex-center">
+                <p class="day-temperature">28°</p>
+                <p class="info-text night-temperature">20°</p>
+              </div>
+            </div>
+            <div class="week-card flex flex-column flex-center">
+              <p class="text">Sábado</p>
+              <img
+                src="./src/assets/imgs/rainny-img.svg"
+                alt="Imagem de chuva em desenho"
+              />
+              <div class="temperatures flex flex-center">
+                <p class="day-temperature">25°</p>
+                <p class="info-text night-temperature">21°</p>
+              </div>
+            </div>
+            <div class="week-card flex flex-column flex-center">
+              <p class="text">Domingo</p>
+              <img
+                src="./src/assets/imgs/stormy-img.svg"
+                alt="Imagem de nuvens em desenho"
+              />
+              <div class="temperatures flex flex-center">
+                <p class="day-temperature">20°</p>
+                <p class="info-text night-temperature">14°</p>
+              </div>
+            </div>
+            <div class="week-card flex flex-column flex-center">
+              <p class="text">Segunda-feira</p>
+              <img
+                src="./src/assets/imgs/misty-img.svg"
+                alt="Imagem de nuvens em desenho"
+              />
+              <div class="temperatures flex flex-center">
+                <p class="day-temperature">24°</p>
+                <p class="info-text night-temperature">18°</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
