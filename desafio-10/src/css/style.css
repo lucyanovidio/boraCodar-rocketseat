@@ -1,9 +1,3 @@
-/* 
-    faltando
-
-    - o gráfico direito 
-*/
-
 /* GLOBAL */
 
 * {
@@ -69,7 +63,7 @@ body * {
   color: var(--secondary-opaque);
 }
 
-.day-temperature {
+.max-temperature {
   color: var(--white);
 }
 
@@ -136,15 +130,18 @@ header button {
   position: absolute;
   transform: translateX(-50%);
   
-  color: var(--input-text);
-  padding: 1rem 2rem;
-
+  padding: .4rem 3rem;
+  
   cursor: pointer;
-  transition: background .3s;
 }
 
 header button:hover {
   background-color: var(--green-hover);
+  border: .2rem solid var(--green-hover);
+}
+
+header button img {
+  width: 2.5rem;
 }
 
 /* CONTAINER */
@@ -164,6 +161,8 @@ header button:hover {
 }
 
 #weather-img {
+  width: 17.6rem;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -212,8 +211,8 @@ section.col-a h1 {
   line-height: 10.6rem;
 }
 
-section.col-a .day-temperature,
-section.col-a .night-temperature {
+section.col-a .max-temperature,
+section.col-a .min-temperature {
   font-size: var(--subtitle-fs);
   line-height: 2.4rem;
 }

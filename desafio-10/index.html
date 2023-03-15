@@ -15,6 +15,7 @@
     />
 
     <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="./src/js/index.js" type="module" defer></script>
   </head>
   <body class="flex flex-center flex-column">
@@ -23,7 +24,9 @@
             <label for="city-input">Digite sua cidade</label>
             <div class="input-wrapper">
                 <input type="text" id="city-input" placeholder="Ex.: Nova Iguaçu" />
-                <button>Verificar</button>
+                <button>
+                    <img src="./src/assets/icons/lupa.png" alt="Ícone de lupa para pesquisa" />
+                </button>
             </div>
         </form>
     </header>
@@ -31,7 +34,7 @@
     <div class="wrapper flex flex-center">
       <div class="container grid">
         <img
-          src="./src/assets/imgs/clouds-img.svg"
+          src="./src/assets/imgs/Clouds-img.svg"
           alt="Imagem de nuvens representando o tempo atual"
           id="weather-img"
         />
@@ -41,14 +44,14 @@
               src="./src/assets/icons/pin-icon.svg"
               alt="Ícone de localização"
             />
-            <span>Rio do Sul, SC</span>
+            <span id="city-name"></span>
           </h4>
           <div class="main-info grid">
             <div class="numbers flex flex-center flex-column">
-              <h1 id="current-temperature">18</h1>
+              <h1 id="current-temperature"></h1>
               <div class="temperatures flex flex">
-                <p class="day-temperature">22°</p>
-                <p class="info-text night-temperature">16°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
             <div class="celcius">°C</div>
@@ -62,7 +65,7 @@
               <div class="weather-info-text">
                 <p class="small-text">Vento</p>
                 <p>
-                  <span>17</span>
+                  <span id="wind"></span>
                   <span>km/h</span>
                 </p>
               </div>
@@ -75,7 +78,7 @@
               <div class="weather-info-text">
                 <p class="small-text">Umidade</p>
                 <p>
-                  <span>31</span>
+                  <span id="humidity"></span>
                   <span>%</span>
                 </p>
               </div>
@@ -88,7 +91,7 @@
               <div class="weather-info-text">
                 <p class="small-text">Chuva</p>
                 <p>
-                  <span>10</span>
+                  <span id="rain"></span>
                   <span>%</span>
                 </p>
               </div>
@@ -149,58 +152,58 @@
           </section>
           <section id="week-section" class="flex flex-center">
             <div class="week-card flex flex-column flex-center">
-              <p class="text">Amanhã</p>
+              <p class="text"></p>
               <img
-                src="./src/assets/imgs/cloudy-img.svg"
-                alt="Imagem de nuvens em desenho"
+                src=""
+                alt=""
               />
               <div class="temperatures flex flex-center">
-                <p class="day-temperature">21°</p>
-                <p class="info-text night-temperature">16°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
             <div class="week-card flex flex-column flex-center">
-              <p class="text">Sexta-feira</p>
+              <p class="text"></p>
               <img
-                src="./src/assets/imgs/sunny-img.svg"
-                alt="Imagem do sol em desenho"
+                src=""
+                alt=""
               />
               <div class="temperatures flex flex-center">
-                <p class="day-temperature">28°</p>
-                <p class="info-text night-temperature">20°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
             <div class="week-card flex flex-column flex-center">
-              <p class="text">Sábado</p>
+              <p class="text"></p>
               <img
-                src="./src/assets/imgs/rainny-img.svg"
-                alt="Imagem de chuva em desenho"
+                src=""
+                alt=""
               />
               <div class="temperatures flex flex-center">
-                <p class="day-temperature">25°</p>
-                <p class="info-text night-temperature">21°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
             <div class="week-card flex flex-column flex-center">
-              <p class="text">Domingo</p>
+              <p class="text"></p>
               <img
-                src="./src/assets/imgs/stormy-img.svg"
-                alt="Imagem de nuvens em desenho"
+                src=""
+                alt=""
               />
               <div class="temperatures flex flex-center">
-                <p class="day-temperature">20°</p>
-                <p class="info-text night-temperature">14°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
             <div class="week-card flex flex-column flex-center">
-              <p class="text">Segunda-feira</p>
+              <p class="text"></p>
               <img
-                src="./src/assets/imgs/misty-img.svg"
-                alt="Imagem de nuvens em desenho"
+                src=""
+                alt=""
               />
               <div class="temperatures flex flex-center">
-                <p class="day-temperature">24°</p>
-                <p class="info-text night-temperature">18°</p>
+                <p class="max-temperature"></p>
+                <p class="info-text min-temperature"></p>
               </div>
             </div>
           </section>

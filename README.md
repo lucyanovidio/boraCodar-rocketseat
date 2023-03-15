@@ -34,7 +34,7 @@ Participe também! É só entrar no site do <a href="https://boracodar.dev">**#b
   </tr>
   <tr>
     <td>6. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-06">Cartão de embarque</a></td>
-    <td></td>
+    <td>10. <a href="https://github.com/lucyanovidio/boraCodar-rocketseat/tree/main/desafio-10">Página de clima</a></td>
   </tr>
 </table>
 
