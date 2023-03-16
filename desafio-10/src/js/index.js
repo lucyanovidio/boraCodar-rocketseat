@@ -8,13 +8,16 @@ form.addEventListener("submit", handleForecast);
 
 function handleForecast(e) {
   e.preventDefault();
-  const inputUserCity = input.value;
 
-  // openWeatherMapTodayGet(city, API_Key);
+  const inputUserCity = input.value;
+  displayWeather(inputUserCity, API_Key);
 }
 
 function renderCurrentUserLocationWeather() {
+  displayWeather("Nova Iguaçu", API_Key);
+  
   let lat, lon;
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       lat = position.coords.latitude;
@@ -26,8 +29,6 @@ function renderCurrentUserLocationWeather() {
         })
         .catch((error) => console.error(error));
     });
-  } else {
-    displayWeather("Nova Iguaçu", API_Key);
   }
 }
 
@@ -53,19 +54,19 @@ function displayWeather(city, API_Key) {
       currentRainEl.textContent = userCity.today.rain;
 
       todayIconEl.setAttribute("src", `./src/assets/imgs/${userCity.today.weather}-img.svg`);
-      todayIconEl.setAttribute("alt", `Imagem representando o tempo: ${userCity.today.description}.`);
+      todayIconEl.setAttribute("alt", `Imagem representando ${userCity.today.description}.`);
 
       openWeatherMapNextDaysGet(userCity.lat, userCity.lon, API_Key)
         .then(userCity => {
           // Weekdays
 
-          const firstDayEl = document.querySelector("#week-section .week-card:nth-child(1) .text"); 
+          const firstDayEl = document.querySelector("#week-section .week-card:nth-child(1) .text");
           const secondDayEl = document.querySelector("#week-section .week-card:nth-child(2) .text");
           const thirdDayEl = document.querySelector("#week-section .week-card:nth-child(3) .text");
           const fourthDayEl = document.querySelector("#week-section .week-card:nth-child(4) .text");
           const fifthDayEl = document.querySelector("#week-section .week-card:nth-child(5) .text");
           
-          firstDayEl.textContent = userCity.nextDaysWeather[1].weekday;
+          firstDayEl.textContent = userCity.nextDaysWeather[1].weekday; 
           secondDayEl.textContent = userCity.nextDaysWeather[2].weekday;
           thirdDayEl.textContent = userCity.nextDaysWeather[3].weekday;
           fourthDayEl.textContent = userCity.nextDaysWeather[4].weekday;
@@ -125,7 +126,7 @@ function displayWeather(city, API_Key) {
         })
         .catch(error => console.log("Next Days Forecast Error:", error));
     })
-    .catch(error => console.error("Today Forecast Error: ", error));
+    .catch(error => console.error("Today Forecast Error: ", error)); 
 }
 
 async function openWeatherMapTodayGet(city, API_Key) {
